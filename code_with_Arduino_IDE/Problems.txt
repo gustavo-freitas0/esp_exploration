@@ -1,0 +1,6 @@
+1 - I couldn't use VS Code together with the Arduino IDE. I had to add the path of the
+libraries in c_cpp_properties.json. In addition, some of them didn't work, so I also added
+"USBCON" to the defines.
+
+2 - All the .ino files must be in a folder with the same name. If you don't do this 
+an error related to not finding the main file.
