@@ -1,32 +1,26 @@
-# _Sample project_
+Overview
+===
 
-(See the README.md file in the upper level 'examples' directory for more information about examples.)
+FreeRTOS is a king of SMP (Symmetric Multiprocessing). A SMP is a computing architecture where two or more identical CPU cores are connected to a single shared main memory and controlled by a single operation system.
 
-This is the simplest buildable example. The example is used by command `idf.py create-project`
-that copies the project to user specified path and set it's name. For more information follow the [docs page](https://docs.espressif.com/projects/esp-idf/en/latest/api-guides/build-system.html#start-a-new-project)
-
+Freertos provide by Espressif is based on Vanilla FREERTOS v10.5.1 and contains significant modiications. This RTOS is supported on numerous single-core MCUs and SoCs.
 
 
-## How to use example
-We encourage the users to use the example as a template for the new projects.
-A recommended way is to follow the instructions on a [docs page](https://docs.espressif.com/projects/esp-idf/en/latest/api-guides/build-system.html#start-a-new-project).
+## IDF FreeRTOS tasks:
 
-## Example folder contents
+ * Can only be in one of the following states: Running, Ready, Blocked or Suspended.
+ * Tipically implemented as an infinite loop
+ * Should never return
 
-The project **sample_project** contains one source file in C language [main.c](main/main.c). The file is located in folder [main](main).
 
-ESP-IDF projects are built using CMake. The project build configuration is contained in `CMakeLists.txt`
-files that provide set of directives and instructions describing the project's source files and targets
-(executable, library, or both). 
 
-Below is short explanation of remaining files in the project folder.
 
-```
-├── CMakeLists.txt
-├── main
-│   ├── CMakeLists.txt
-│   └── main.c
-└── README.md                  This is the file you are currently reading
-```
-Additionally, the sample project contains Makefile and component.mk files, used for the legacy Make based build system. 
-They are not used or needed when building with CMake and idf.py.
+Important points:
+---
+
+* IDF FreeRTOS can also be configured for single-core by enabling the CONFIG_FREERTOS_UNICORE option.
+
+References:
+---
+
+* [FreeRTOS IDF](https://docs.espressif.com/projects/esp-idf/en/stable/esp32/api-reference/system/freertos_idf.html)

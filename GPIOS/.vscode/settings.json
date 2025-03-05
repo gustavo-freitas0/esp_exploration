@@ -6,6 +6,5 @@
         "board/esp32-wrover-kit-3.3v.cfg"
     ],
     "idf.portWin": "COM6",
-    "idf.toolsPathWin": "c:\\esp_exploration\\idf_tools",
-    "idf.flashType": "UART"
+    "idf.toolsPathWin": "c:\\esp_exploration\\idf_tools"
 }
